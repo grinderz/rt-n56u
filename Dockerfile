@@ -33,9 +33,11 @@ RUN apt-get install -qy \
 	vim \
   	autopoint \
 	gperf \
-	python-docutils
+	python-docutils \
+	module-init-tools \
+	sudo \
 
 
 RUN git clone https://bitbucket.org/padavan/rt-n56u.git /opt/rt-n56u
 
-RUN cd /opt/rt-n56u/toolchain-mipsel && ./clean_sources && ./build_toolchain_3.4.x
+RUN cd /opt/rt-n56u/toolchain-mipsel && ./clean_sources && ./build_toolchain
